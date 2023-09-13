@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content:space-around;
+        }
+
+        .item{
+            padding:10px;
+            margin:5px;
+            border: 2px solid #333;
+        }
+
+        @media(max-width:768px){
+            .container{
+                flex-direction:column;
+            }
+            .item{
+                width:fit-content;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Hi</div>
+        <div class="item">Omer</div>
+        <div class="item">Hussein</div>
+    </div>
+</body>
+</html>
