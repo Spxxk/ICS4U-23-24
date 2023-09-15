@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            background-color: yellowgreen;
+            flex-direction: row;
+        }
+        .column{
+            display: flex;
+            background-color: blueviolet;
+            align-items:center;
+            justify-content: center;
+            width: 300px;
+            height: 400px;
+            margin: 10px;
+            flex-direction: column;
+        }
+        .card{
+            width: 200px;
+            height: 100px;
+            margin: 5px;
+            background-color: orangered;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="card"> 123</div>
+            <div class="card"> 456</div>
+        </div>
+        <div class="column">
+            <div class="card"> 123</div>
+            <div class="card"> 456</div>
+            <div class="card"> 789</div>
+        </div>
+        <div class="column">
+            <div class="card"> 123</div>
+        </div>
+    </div>
+</body>
+</html>
