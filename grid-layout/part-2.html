@@ -1,0 +1,61 @@
+<!-- Common Grid Properties 
+
+grid-template-columns: Defines the columns of the grid with a space-separated list of values representing track sizes.
+
+grid-template-rows: Defines the rows of the grid similarly to grid-template-columns.
+
+grid-gap (or its specific properties row-gap and column-gap): Specifies the size of the gaps (gutters) between rows and columns.
+
+grid-column & grid-row: Determine where an item is placed in the grid by specifying the start and end columns or rows.
+
+grid-template-areas: Allows for the visualization and naming of grid areas which can then be referenced when placing items.
+
+-->
+
+<!-- Grid Template Definitions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Grid Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 200px 2fr;
+            grid-template-rows: 100px auto;
+            gap: 10px; /* Optional: To give some space between the grid items */
+        }
+
+        /* Styling for visualization */
+        .container > div {
+            border: 2px solid black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+    
+The grid-template-columns and grid-template-rows properties serve as foundational pillars for setting up a grid layout. 
+They allow developers to define the structure of grids in terms of the number of columns and rows and their respective sizes. 
+With these properties, developers can create intricate and responsive layouts that adapt to different screen sizes and content 
+requirements. By offering a precise method to control layout dimensions and positioning, 
+these properties eliminate many of the complications and hacks traditionally associated with CSS layouts. 
+
+-->
