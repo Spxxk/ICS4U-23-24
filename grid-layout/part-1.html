@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid-item {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="grid-item">O</div>
+        <div class="grid-item">M</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">R</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+2:
+Explain what grid lines are and how they function in Grid Layout:
+Grid lines are the dividing lines that make up the structure of the grid layout. 
+They define the start and end of grid tracks, which are the row or column spaces between two adjacent grid lines.
+
+Grid lines help in positioning grid items within the grid container. 
+They can be referenced by their numerical index or by a name (if specified). 
+These references are used to place items or determine their span within the grid layout.
+
+
+
+Describe what a grid cell is and how it relates to grid lines:
+A grid cell is the individual space or "box" bounded by adjacent vertical and horizontal grid lines.
+
+Grid cells are formed by the intersection of vertical (column) and horizontal (row) grid lines. 
+Each grid cell represents the smallest unit of the grid and can house one or more grid items.
+
+
+
+Draw a simple diagram to illustrate a grid container with grid lines and cells.
+
+Grid Conatiner
+---------------
+|cells |      |
+|      |      | lines
+|-------------|  
+|      |      |
+|      |      |
+--------------- lines
+
+-->
