@@ -16,7 +16,8 @@ less efficient layout hacks. Embracing both tools can lead to more adaptive, eff
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .grid-container {
+        
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -27,12 +28,11 @@ less efficient layout hacks. Embracing both tools can lead to more adaptive, eff
     padding: 10px;
 }
 
-/* Use Flexbox within the card's image container */
 .card-image-container {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center;     /* Vertically center the content */
-    height: 150px;           /* Setting a height will ensure space for the image, even if it hasn't loaded yet */
+    justify-content: center; 
+    align-items: center;   
+    height: 150px; 
 }
 
 .card img {
@@ -48,14 +48,14 @@ less efficient layout hacks. Embracing both tools can lead to more adaptive, eff
             <div class="card-image-container">
                 <img src="Supposed Image omch" alt="Image 1">
             </div>
-            <p class="card-description">This is a description for Card 1.</p>
+            <p class="card-description">Hi Omer.</p>
         </div>
         <div class="card">
             <h2 class="card-title">Card 2</h2>
             <div class="card-image-container">
                 <img src="Another Image" alt="Image 2">
             </div>
-            <p class="card-description">This is a slightly longer description for Card 2. It might even wrap to a second line!</p>
+            <p class="card-description">Lets wrap this omer we need to make this long so I can make sure it works omch</p>
         </div>
     </div>    
 </body>
