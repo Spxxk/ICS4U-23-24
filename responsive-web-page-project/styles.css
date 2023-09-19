@@ -1,7 +1,21 @@
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img {
+    flex: 1 1 200px;
+    margin: 8px;
+    max-width: 100%;
+    transition: flex-basis 0.3s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .gallery img {
+        flex-basis: 100%;
+        margin: 8px auto;
+    }
 }
 
 header {

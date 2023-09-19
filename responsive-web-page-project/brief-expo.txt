@@ -21,7 +21,10 @@ This system allows for efficient arrangement of elements in rows and columns:
 
 
 Gallery Adaptability: 
-Utilizing the grid-template-columns property, the gallery benefits from a responsive nature. The repeat(auto-fill, minmax(200px, 1fr)) directive ensures that images are dynamically arranged based on screen width without distorting the aesthetics.
+Utilizing the grid-template-columns property, the gallery benefits from a responsive nature. 
+The repeat(auto-fill, minmax(200px, 1fr)) directive ensures that images are dynamically arranged based on screen width 
+without distorting the aesthetics. And the ease in and out method used so when I minimize the screen it adjust correctly and 
+smoothly.
 
 
 Role of Flexbox:
