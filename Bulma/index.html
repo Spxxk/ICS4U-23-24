@@ -1,11 +1,34 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form with Bulma</title>
+    <title>Bulma Thing for Mr.Deslauries</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+    <style>
+
+        .circular-image img {
+            border-radius: 50%;
+            background-color: white;
+            box-shadow: 0 0 0 5px white, 0 0 0 5.1px grey;
+        }
+    
+        .out-of-box {
+            position: relative;
+            top: -50px;
+        }
+    
+        .remember-me-centered {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        
+        .move-down {
+        margin-top: 80px;
+        }
+    </style>    
 </head>
 <body>
     <section class="section">
@@ -13,32 +36,32 @@
             <div class="columns is-centered">
                 <div class="column is-4">
                     <h3 class="title has-text-centered">Login</h3>
+                    <hr style="height:1px;border-width:0;color:gray;background-color:gray">
                     <p class="subtitle has-text-centered">Please login to proceed.</p>
-
-                    <div class="box">
-                        <div class="media">
-                            <div class="media-content has-text-centered">
-                                <figure class="image is-96x96 is-inline-block">
+                    <div class="box move-down">
+                     <div class="media">
+                         <div class="media-content has-text-centered">
+                              <figure class="image is-96x96 is-inline-block circular-image out-of-box">
                                     <img src="https://placehold.it/150x150" alt="Placeholder">
-                                </figure>
-                            </div>
-                        </div>
+                               </figure>
+                          </div>
+                     </div>
 
                         <div class="field">
-                            <label class="label">Your Email</label>
+                            <label class="label"></label>
                             <div class="control">
                                 <input class="input" type="email" placeholder="Your Email">
                             </div>
                         </div>
 
                         <div class="field">
-                            <label class="label">Your Password</label>
+                            <label class="label"></label>
                             <div class="control">
                                 <input class="input" type="password" placeholder="Your Password">
                             </div>
                         </div>
 
-                        <div class="field">
+                        <div class="field remember-me-centered">
                             <div class="control">
                                 <label class="checkbox">
                                     <input type="checkbox"> Remember me
