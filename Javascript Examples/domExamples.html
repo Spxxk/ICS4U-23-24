@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue{
+            color: blue;
+        }
+
+        .yellow-back{
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <p id="test">
+        Hello
+    </p>
+
+    <p class="sample">
+
+    </p>
+</body>
+</html>
+<script>
+    const pTags1 = document.querySelectorAll('p')
+    const PTags2 = document.querySelectorAll('.sample')
+    const pTags3 = document.querySelectorAll('p#test')
+    const pTags4 = document.querySelectorAll('#test')
+
+    pTags3[0].classList.add("blue")
+    pTags3[0].classList.add("yellow-back")
+
+    PTags2[0].innerHTML = '<span>Hello World</span>'
+
+    const div = documet.createElement('div')
+
+    div.appendChild(pTags1[0])
+
+    docuent.querySelector('body').appendChild(body)
+</script>

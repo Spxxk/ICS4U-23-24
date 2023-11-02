@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let add = function (x,y) {
+            return x + y;
+        };
+
+        let add2 = (x,y) => x+y;
+
+        let add3 = (x,y) => {return x+y};
+
+        let add4 = function (a,b){
+            let chuck = 42;
+            return a+b+chuck;
+        }
+
+        let add5 = (a,b) =>{
+            let chuck = 42
+            return a+b+chuck
+        }
+
+        console.log(add3(20,20));
+        console.log(add5(15,10));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

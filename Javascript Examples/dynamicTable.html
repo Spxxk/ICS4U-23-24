@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+
+    <section class="section">
+        <div class="container">
+            <div class="dropdown is-active">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Dropdown button</span>
+                    <span class="icon is-small">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                  <div class="dropdown-content">
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <table id="standings" class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PTS</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+<script>
+    const teams = [
+        {Name:"Maple Leafs", W:3, L:2, PTS:6},
+        {Name:"Canadians", W:2, L:3, PTS:4},
+        {Name:"Team Ethan", W:2, L:2, PTS:4},
+        {Name:"Team Max", W:0, L:6, PTS:0},
+        {Name:"Team Jad", W:0, L:6, PTS:0}
+    ]
+
+    function updateStandings(teamArr){
+        const tbody = document.querySelector('tbody')
+        
+        for (let index = 0; index < teamArr.length; index++) {
+            const team = teamArr[index];
+            
+            let tr = document.createElement('tr')
+            
+            let td = document.createElement('td')
+            td.textContent = team.Name
+            tr.appendChild(td)
+
+            td = document.createElement('td')
+            td.textContent = team.W
+            tr.appendChild(td)
+
+            td = document.createElement('td')
+            td.textContent = team.L
+            tr.appendChild(td)
+
+            td = document.createElement('td')
+            td.textContent = team.PTS
+            tr.appendChild(td)
+
+            tbody.append(tr)
+        }
+    }
+
+    function updateDropDown(teamArr){
+        const tbody = document.querySelector('.dropdown-content')
+        
+        for (let index = 0; index < teamArr.length; index++) {
+            const team = teamArr[index];
+            
+            let option = document.createElement('a')
+
+            option.classList.add('dropdown-item')
+            option.textContent = team.Name
+            option.setAttribute('href', '#')
+            tbody.appendChild(option)
+        }
+        
+    }
+
+
+    updateDropDown(teams)
+    updateStandings(teams)
+    
+</script>
+
+</html>

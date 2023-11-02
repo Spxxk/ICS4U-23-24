@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // var x = 7
+
+        // if(true)
+        // {
+        //     let x = 9;
+        //     console.log(x)
+        // }
+
+        const arr = [1,2,3,4,5,6,7,8,9]
+        console.log(arr)
+
+        arr.push(100)
+        console.log(arr)
+
+        arr.pop()
+        console.log(arr)
+
+        arr[3] = 99
+        console.log(arr)
+        // arr[87] = 6
+        // console.log(arr)
+
+        let arrStr = JSON.stringify(arr)
+        console.log(arrStr)
+
+        let arrObj = JSON.parse(arrStr)
+        console.log(arrObj)
+
+        // Silce
+        const temp = arr.slice(1,3)
+        console.log(temp)
+
+        arr.splice(1,3)
+        console.log(arr)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
