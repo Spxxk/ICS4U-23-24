@@ -78,14 +78,16 @@ const students2 = [
 
 // students2.sort((a, b) => {
 //   if (a.score > b.score) {
-//     return -1;
-//   } else if (a.score < b.score) {
 //     return 1;
+//   } else if (a.score < b.score) {
+//     return -1;
 //   } else {
-//     return a.name.localeCompare(b.name);
+//     return a.name > b.name;
 //   }
 // });
 
 // console.log(students2);
+
+
 
 

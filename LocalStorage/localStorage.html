@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hockey Game Scores</title>
+</head>
+<body>
+    <h1>Hockey Game Scores</h1>
+
+    <!-- Form to collect game scores -->
+    <form id="scoreForm">
+        <label for="team1">Team 1: </label>
+        <select id="team1" required>
+            <option value="Team A">Team A</option>
+            <option value="Team B">Team B</option>
+            <option value="Team C">Team C</option>
+            <option value="Team D">Team D</option>
+        </select>
+        <label for="team1Score">Score: </label>
+        <input type="number" id="team1Score" required>
+        
+        <label for="team2">Team 2: </label>
+        <select id="team2" required>
+            <option value="Team A">Team A</option>
+            <option value="Team B">Team B</option>
+            <option value="Team C">Team C</option>
+            <option value="Team D">Team D</option>
+        </select>
+        <label for="team2Score">Score: </label>
+        <input type="number" id="team2Score" required>
+        
+        <button type="submit">Add Score</button>
+    </form>
+
+    <!-- Display the list of saved game scores -->
+    <ul id="scoreList"></ul>
+
+    <script>
+        // Get the form and list elements
+        const form = document.getElementById('scoreForm');
+        const list = document.getElementById('scoreList');
+
+        // Check if local storage has existing scores
+        let scoreData = JSON.parse(localStorage.getItem('scoreData')) || [];
+
+        // Function to update the list and save to local storage
+        function updateList() {
+            list.innerHTML = '';
+            scoreData.forEach((score, index) => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `<span>${score.team1}: ${score.team1wScore} - ${score.team2}: ${score.team2Score} -</span> <a href="#" onclick="removeScore(${index})">Remove</a>`;
+                list.appendChild(listItem);
+            });
+            localStorage.setItem('scoreData', JSON.stringify(scoreData));
+        }
+
+        // Function to add game scores from the form
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const team1Select = document.getElementById('team1');
+            const team1ScoreInput = document.getElementById('team1Score');
+            const team2Select = document.getElementById('team2');
+            const team2ScoreInput = document.getElementById('team2Score');
+
+            const team1 = team1Select.value;
+            const team1Score = parseInt(team1ScoreInput.value);
+            const team2 = team2Select.value;
+            const team2Score = parseInt(team2ScoreInput.value);
+
+            if (!isNaN(team1Score) && !isNaN(team2Score)) {
+                const score = { team1, team1Score, team2, team2Score };
+                scoreData.push(score);
+                team1Select.value = 'Team A';
+                team1ScoreInput.value = ''; // Clear the input field for Team 1
+                team2Select.value = 'Team A';
+                team2ScoreInput.value = ''; // Clear the input field for Team 2
+                updateList();
+            }
+        });
+
+        // Function to remove a score from the list
+        function removeScore(index) {
+            scoreData.splice(index, 1);
+            updateList();
+        }
+
+        // Initial list population
+        updateList();
+    </script>
+</body>
+</html>
